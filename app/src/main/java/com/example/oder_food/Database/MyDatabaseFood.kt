@@ -5,7 +5,6 @@ import android.content.ContentValues
 import android.content.Context
 import android.database.sqlite.SQLiteDatabase
 import android.database.sqlite.SQLiteOpenHelper
-import com.example.oder_food_app.DataBase.AccountFood
 import com.example.oder_food_app.DataBase.FoodDT
 import com.example.oder_food_app.DataBase.FoodDT_Cart
 import com.example.oder_food_app.DataBase.FoodDT_History
@@ -98,9 +97,6 @@ class MyDatabaseFood(context: Context): SQLiteOpenHelper(context, "FOODDB", null
 
         db?.execSQL("CREATE TABLE HISTORY(USERID INTEGER PRIMARY KEY AUTOINCREMENT, MADON TEXT, HOTEN TEXT, SDT TEXT, DIACHI TEXT, THUCDON TEXT, NGAYDAT TEXT, TONGTIEN FLOAT, THANHTOAN FLOAT)")
 
-        //------------------------ TABLE ACCOUNT ----------------------
-
-        db?.execSQL("CREATE TABLE ACCOUNT(USERID INTEGER PRIMARY KEY AUTOINCREMENT, USER TEXT, PASSWORD TEXT)")
     }
 
     override fun onUpgrade(p0: SQLiteDatabase?, p1: Int, p2: Int) {
@@ -147,24 +143,6 @@ class MyDatabaseFood(context: Context): SQLiteOpenHelper(context, "FOODDB", null
         return foodList
     }
 
-    @SuppressLint("Range")
-    fun getAllAccount(): ArrayList<AccountFood> {
-        val foodList = ArrayList<AccountFood>()
-        val db = this.readableDatabase
-        val cursor = db.rawQuery("SELECT * FROM ACCOUNT", null)
-
-        while (cursor.moveToNext()) {
-            val user = cursor.getString(cursor.getColumnIndex("USER"))
-            val pass = cursor.getString(cursor.getColumnIndex("PASSWORD"))
-
-            val food = AccountFood(user, pass)
-            foodList.add(food)
-        }
-        cursor.close()
-        db.close()
-
-        return foodList
-    }
 
     @SuppressLint("Range")
     fun getAllFood_History(): List<FoodDT_History> {
