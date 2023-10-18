@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_gravity="center"
+    android:gravity="center|top"
+    android:orientation="vertical">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="380dp"
+        android:layout_gravity="center"
+        android:background="@drawable/bg_customdialog"
+        android:gravity="center|top"
+        android:orientation="vertical">
+        <TextView
+            android:id="@+id/txtdonhang"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="27dp"
+            android:text="Đăng Kí"
+            android:textColor="@color/black"
+            android:textSize="25dp"
+            android:textStyle="bold" />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="27dp"
+            android:orientation="vertical">
+
+            <EditText
+                android:id="@+id/edt_emailregister"
+                android:layout_width="320dp"
+                android:layout_height="42dp"
+                android:background="@drawable/bg_login"
+                android:ems="10"
+                android:textColor="@color/black"
+                android:paddingLeft="7dp"
+                android:textColorHint="#8A8989"
+                android:hint="Email"
+                android:inputType="textEmailAddress" />
+
+            <EditText
+                android:id="@+id/edt_pwregister"
+                android:layout_width="320dp"
+                android:layout_height="42dp"
+                android:layout_marginTop="20dp"
+                android:background="@drawable/bg_login"
+                android:ems="10"
+                android:textColor="@color/black"
+                android:textColorHint="#8A8989"
+                android:paddingLeft="7dp"
+                android:hint="Password"
+                android:inputType="textPassword" />
+
+            <EditText
+                android:id="@+id/edt_Re_enter_pw_register"
+                android:layout_width="320dp"
+                android:layout_height="42dp"
+                android:textColor="@color/black"
+                android:layout_marginTop="20dp"
+                android:textColorHint="#8A8989"
+                android:background="@drawable/bg_login"
+                android:ems="10"
+                android:paddingLeft="7dp"
+                android:hint="Re-enter password"
+                android:inputType="textPassword" />
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="110dp"
+            android:layout_gravity="center"
+            android:orientation="horizontal">
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/btn_huyregister"
+                android:layout_width="110dp"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:textColor="@color/black"
+                android:textSize="20dp"
+                android:layout_gravity="center"
+                android:background="@drawable/bg_login"
+                android:text="Hủy"
+                android:textAllCaps="false"/>
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/btn_register"
+                android:layout_width="110dp"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:layout_marginStart="30dp"
+                android:textColor="@color/black"
+                android:textSize="20dp"
+                android:layout_gravity="center"
+                android:background="@drawable/bg_login"
+                android:text="Đăng Kí"
+                android:textAllCaps="false"/>
+        </LinearLayout>
+    </LinearLayout>
+</LinearLayout>

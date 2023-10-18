@@ -1,0 +1,26 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <!-- Base application theme. -->
+    <style name="Base.Theme.Oder_Food" parent="Theme.Material3.DayNight.NoActionBar">
+        <!-- Customize your light theme here. -->
+        <!-- <item name="colorPrimary">@color/my_light_primary</item> -->
+    </style>
+
+    <style name="Theme.Oder_Food" parent="Base.Theme.Oder_Food" />
+    <style name="Themecustom" parent="Theme.AppCompat.Light.Dialog">
+        <item name="android:windowBackground">@android:color/transparent</item>
+    </style>
+
+    <style name="MySearchViewStyle" parent="">
+        <item name="android:editTextColor">@color/black</item>
+        <item name="android:textColorHint">@color/black</item>
+    </style>
+    <style name="MyCheckboxStyle" parent="Theme.AppCompat.Light">
+        <item name="colorAccent">#000000</item>
+        <item name="android:textColorSecondary">@android:color/black</item>
+    </style>
+    <style name="AppTheme" parent="Theme.Material3.DayNight.NoActionBar">
+        <!-- Đổi màu cho thanh trạng thái (status bar) -->
+        <item name="android:statusBarColor">#FA4D47</item>
+    </style>
+
+</resources>
